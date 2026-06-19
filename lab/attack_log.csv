@@ -1,0 +1,7 @@
+attack_name,start_ts,end_ts,kali_ip,win_ip,notes
+slowhttptest,2026-05-23 18:27:30,2026-05-23 18:31:41,192.168.142.128,192.168.142.1,slow read DoS 200 sockets DETECTED
+medusa_ssh,2026-05-23 18:32:01,2026-05-23 18:32:02,192.168.142.128,192.168.142.1,SSH brute force 6 attempts PARTIALLY DETECTED
+nikto,2026-05-23 18:32:09,2026-05-23 18:33:30,192.168.142.128,192.168.142.1,web vuln scan 8106 requests DETECTED
+slowhttptest_v2,2026-05-23 23:07:30,2026-05-23 23:11:33,192.168.142.128,192.168.142.1,reproduction run - 100% recall over 4min
+medusa_ssh_v2,2026-05-23 23:12:15,2026-05-23 23:12:17,192.168.142.128,192.168.142.1,reproduction run - 75% recall (45/60 detected)
+nikto_v2,2026-05-23 23:12:31,2026-05-23 23:13:48,192.168.142.128,192.168.142.1,reproduction run - partial recall (46 detections)
