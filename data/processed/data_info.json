@@ -1,0 +1,28 @@
+{
+  "source": "CIC-IDS2017",
+  "total_rows": 418481,
+  "n_features": 50,
+  "classes": [
+    "Benign",
+    "Bot",
+    "Brute Force",
+    "DDoS",
+    "DoS",
+    "Infiltration",
+    "Port Scan",
+    "Web Attack"
+  ],
+  "class_distribution": {
+    "Benign": 100000,
+    "Bot": 1966,
+    "Brute Force": 15342,
+    "DDoS": 100000,
+    "DoS": 100000,
+    "Infiltration": 500,
+    "Port Scan": 100000,
+    "Web Attack": 673
+  },
+  "balanced": true,
+  "max_per_class": 100000,
+  "min_per_class": 500
+}
