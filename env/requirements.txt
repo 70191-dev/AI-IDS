@@ -1,0 +1,17 @@
+numpy
+pandas
+scikit-learn
+joblib
+fastapi
+uvicorn
+streamlit
+streamlit-autorefresh
+plotly
+pyarrow
+requests
+scapy
+matplotlib
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+# pywebview: native desktop window wrapper for the SOC dashboard
+pywebview==6.2.1

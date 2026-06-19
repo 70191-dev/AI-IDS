@@ -1,0 +1,10 @@
+# Test-only dependencies — NOT shipped with the IDS.
+# Install: pip install -r env/requirements-dev.txt
+#
+# Why separate from requirements.txt:
+#   - httpx is needed by fastapi.testclient (TestClient) for in-process
+#     ASGI testing. Production code never imports it.
+#   - pytest is for the smoke test scaffolding to be added in Week 4.
+
+httpx>=0.27
+pytest>=8.0
