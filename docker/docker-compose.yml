@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  api:
+    image: python:3.11-slim
+    working_dir: /app
+    command: >
+      bash -lc "pip install -r env/requirements.txt &&
+      python src/data/mock_data.py &&
+      python src/models/train.py &&
+      uvicorn src.serve.app:app --host 0.0.0.0 --port 8000"
+    volumes: [ "../:/app" ]
+    ports: [ "8000:8000" ]
+
+  dashboard:
+    image: python:3.11-slim
+    working_dir: /app
+    command: >
+      bash -lc "pip install -r env/requirements.txt &&
+      streamlit run dashboard/app.py --server.port 8501 --server.address 0.0.0.0"
+    volumes: [ "../:/app" ]
+    ports: [ "8501:8501" ]
+    depends_on: [ api ]
