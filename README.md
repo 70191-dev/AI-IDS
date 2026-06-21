@@ -121,8 +121,8 @@ opaque 32-byte bearer tokens and an 8-hour TTL. Passwords are hashed
 with bcrypt at cost factor 12. Self-demote and self-disable are blocked
 at the API layer; disabling a user atomically revokes their active
 sessions. Bearer tokens are opaque random bytes — not a signed token
-format. There is no OAuth and no SSO. See
-`_project/HARD_CONSTRAINTS.md` for the deliberate scope of the auth model.
+format. There is no OAuth and no SSO; this minimal two-role model is a
+deliberate scope choice for this academic build.
 
 ### Audit log
 
@@ -164,8 +164,6 @@ ai_ids_complete/
 ├── launch.py                      Supervisor: uvicorn + Streamlit
 ├── README.md                      This file
 ├── CHANGES.md                     Dated change log
-├── CURRENT_STATE.md               Architecture snapshot
-├── RECONCILIATION_PHASE2.md       Phase 1 claims → Phase 2 reality
 ├── FUTURE_WORK.md                 Deferred-extension roadmap
 ├── src/
 │   ├── auth/                      passwords, tokens, audit, RBAC
@@ -184,28 +182,18 @@ ai_ids_complete/
 ├── tools/                         bootstrap_admin, dev_up, diagnose_*, replay_*
 ├── tests/                         test_firewall, test_mitigation_routes, test_smoke
 ├── lab/                           ATTACK_VALIDATION, ATTACK_PROFILES, attack_log
-├── defense/                       DEMO_SCRIPT, QA_BANK
-├── env/requirements.txt
-├── _project/                      HARD_CONSTRAINTS, 4_WEEK_PLAN, etc.
-└── _stages/                       Per-week stage briefs
+└── env/requirements.txt
 ```
 
 ## Demo
 
-A scripted 5-minute live attack walkthrough (Kali slowhttptest against
-the Windows host, end-to-end through detection → request → approve →
-netsh block → unblock → audit) is in `defense/DEMO_SCRIPT.md`, which
-also carries the pre-demo checklist and the backup-video fallback
-procedure. The backup video that procedure points to
-(`defense/demo_backup.mp4`) is recorded during dress rehearsal and is
-not committed to the repo.
+The system is demonstrated through a scripted 5-minute live attack
+walkthrough: Kali `slowhttptest` against the Windows host, carried
+end-to-end through detection → request → approve → `netsh` block →
+unblock → audit. A backup screen recording is captured during dress
+rehearsal as a fallback and is not committed to the repo.
 
-Two further defense companions accompany this README:
-`RECONCILIATION_PHASE2.md` maps each Phase 1 proposal claim (FRs,
-non-functional requirements, use cases, scope) to its Phase 2
-implementation, and `defense/QA_BANK.md` holds anticipated panel
-questions with prepared, evidence-cited answers. The deferred-extension
-roadmap is in `FUTURE_WORK.md`.
+The deferred-extension roadmap is in `FUTURE_WORK.md`.
 
 ## Known Limitations
 
@@ -223,8 +211,8 @@ roadmap is in `FUTURE_WORK.md`.
   `hping3 --flood` produce 2-packet singleton flows that fall outside
   the CIC-IDS2017 training distribution; the binary head's
   precision drops on these. Per-flow aggregation is a Phase 1 design
-  choice preserved through Phase 2 (see `_project/HARD_CONSTRAINTS.md`).
-  Cross-flow correlation for scan/flood detection is documented as a
+  choice preserved through Phase 2. Cross-flow correlation for
+  scan/flood detection is documented as a
   designed-on-paper extension in `FUTURE_WORK.md` §2.
 
 - **Multi-class drift on novel attacks.** The binary head remains
