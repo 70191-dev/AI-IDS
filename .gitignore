@@ -53,3 +53,14 @@ docker/docker-compose.yml
 /inspect_db.py
 /verify_ips.py
 
+AGENTS.md
+CLAUDE.md
+CURRENT_STATE.md
+FYP_PHASE_2_FULL_CONTEXT.md
+PROJECT_CONTEXT_FULL.md
+RECONCILIATION_PHASE2.md
+_project/
+_stages/
+defense/EVAL_GAP_ANALYSIS.md
+defense/DEMO_SCRIPT.md
+defense/QA_BANK.md
