@@ -45,3 +45,11 @@ diag_output.txt
 # Local editor / AI-assistant tooling state (not project source)
 .claude/
 
+# Stale out-of-scope compose file (Docker forbidden by HARD_CONSTRAINTS; not the run path)
+docker/docker-compose.yml
+
+# Root-level developer diagnostic scratch scripts (lab one-offs, not runtime path)
+/check_*.py
+/inspect_db.py
+/verify_ips.py
+
