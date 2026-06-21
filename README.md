@@ -1,6 +1,15 @@
+﻿---
+title: AI-IDS SOC Console
+emoji: "🛡️"
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+---
 # AI-Driven Intrusion Detection and Threat Mitigation System for Secure Networks
 
-> Final Year Project — BSCS, University of Lahore (Fall 2022–2026)
+> Final Year Project â€” BSCS, University of Lahore (Fall 2022â€“2026)
 > Project ID: Fall-2025-104
 > Supervisor: Dr. Nadeem Iqbal, Department of CS&IT
 
@@ -81,8 +90,8 @@ require the extensions documented in `FUTURE_WORK.md`.
 1. **Clone the repo.**
 2. **Install Npcap.** Download from <https://npcap.com> and install in
    "WinPcap API-compatible mode". Required for live packet capture.
-3. **Run `START.bat` as administrator** (right-click → Run as
-   administrator — elevation is needed for both packet capture and
+3. **Run `START.bat` as administrator** (right-click â†’ Run as
+   administrator â€” elevation is needed for both packet capture and
    `netsh` rule edits). On the first run, START.bat creates a virtual
    environment under `.venv\`, installs dependencies from
    `env\requirements.txt`, generates training data, and trains the
@@ -120,7 +129,7 @@ Two roles only: `admin` and `analyst`. Sessions are SQLite-backed with
 opaque 32-byte bearer tokens and an 8-hour TTL. Passwords are hashed
 with bcrypt at cost factor 12. Self-demote and self-disable are blocked
 at the API layer; disabling a user atomically revokes their active
-sessions. Bearer tokens are opaque random bytes — not a signed token
+sessions. Bearer tokens are opaque random bytes â€” not a signed token
 format. There is no OAuth and no SSO; this minimal two-role model is a
 deliberate scope choice for this academic build.
 
@@ -150,7 +159,7 @@ Mitigation page rather than being silently swallowed.
 
 Real-time alerts table, score distribution chart, top-source-prefix bar
 chart, alerts-over-time. The capture-interface dropdown shows friendly
-labels (e.g. `Wi-Fi — Intel(R) Wi-Fi 6 AX201 160MHz`) instead of raw
+labels (e.g. `Wi-Fi â€” Intel(R) Wi-Fi 6 AX201 160MHz`) instead of raw
 NPF GUIDs. The Request Block dropdown excludes the local host's own
 IPs (resolved via `socket.gethostname`) so an operator cannot
 accidentally self-block, and deduplicates by source IP so a high-volume
@@ -160,37 +169,37 @@ single attacker collapses to one selectable row.
 
 ```
 ai_ids_complete/
-├── START.bat                      Double-click (admin) to run everything
-├── launch.py                      Supervisor: uvicorn + Streamlit
-├── README.md                      This file
-├── CHANGES.md                     Dated change log
-├── FUTURE_WORK.md                 Deferred-extension roadmap
-├── src/
-│   ├── auth/                      passwords, tokens, audit, RBAC
-│   ├── capture/                   live_capture (FlowAggregator, frozen)
-│   ├── data/                      prep_cic2017, mock_data
-│   ├── mitigation/                firewall (netsh wrapper)
-│   ├── models/                    train.py
-│   ├── serve/                     app.py, auth_routes.py, mitigation_routes.py
-│   └── utils/                     db.py, helpers.py
-├── dashboard/
-│   ├── app.py                     Main SOC console
-│   ├── auth_ui.py                 Login + api_request helper
-│   └── pages/                     1_Users, 2_Audit_Log, 3_Mitigation
-├── models/                        Trained .joblib + threshold.txt (frozen)
-├── data/                          ids.db, blocked_ips.json, cic_profiles.json
-├── tools/                         bootstrap_admin, dev_up, diagnose_*, replay_*
-├── tests/                         test_firewall, test_mitigation_routes, test_smoke
-├── lab/                           ATTACK_VALIDATION, ATTACK_PROFILES, attack_log
-└── env/requirements.txt
+â”œâ”€â”€ START.bat                      Double-click (admin) to run everything
+â”œâ”€â”€ launch.py                      Supervisor: uvicorn + Streamlit
+â”œâ”€â”€ README.md                      This file
+â”œâ”€â”€ CHANGES.md                     Dated change log
+â”œâ”€â”€ FUTURE_WORK.md                 Deferred-extension roadmap
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ auth/                      passwords, tokens, audit, RBAC
+â”‚   â”œâ”€â”€ capture/                   live_capture (FlowAggregator, frozen)
+â”‚   â”œâ”€â”€ data/                      prep_cic2017, mock_data
+â”‚   â”œâ”€â”€ mitigation/                firewall (netsh wrapper)
+â”‚   â”œâ”€â”€ models/                    train.py
+â”‚   â”œâ”€â”€ serve/                     app.py, auth_routes.py, mitigation_routes.py
+â”‚   â””â”€â”€ utils/                     db.py, helpers.py
+â”œâ”€â”€ dashboard/
+â”‚   â”œâ”€â”€ app.py                     Main SOC console
+â”‚   â”œâ”€â”€ auth_ui.py                 Login + api_request helper
+â”‚   â””â”€â”€ pages/                     1_Users, 2_Audit_Log, 3_Mitigation
+â”œâ”€â”€ models/                        Trained .joblib + threshold.txt (frozen)
+â”œâ”€â”€ data/                          ids.db, blocked_ips.json, cic_profiles.json
+â”œâ”€â”€ tools/                         bootstrap_admin, dev_up, diagnose_*, replay_*
+â”œâ”€â”€ tests/                         test_firewall, test_mitigation_routes, test_smoke
+â”œâ”€â”€ lab/                           ATTACK_VALIDATION, ATTACK_PROFILES, attack_log
+â””â”€â”€ env/requirements.txt
 ```
 
 ## Demo
 
 The system is demonstrated through a scripted 5-minute live attack
 walkthrough: Kali `slowhttptest` against the Windows host, carried
-end-to-end through detection → request → approve → `netsh` block →
-unblock → audit. A backup screen recording is captured during dress
+end-to-end through detection â†’ request â†’ approve â†’ `netsh` block â†’
+unblock â†’ audit. A backup screen recording is captured during dress
 rehearsal as a fallback and is not committed to the repo.
 
 The deferred-extension roadmap is in `FUTURE_WORK.md`.
@@ -205,7 +214,7 @@ The deferred-extension roadmap is in `FUTURE_WORK.md`.
   shields ("until restart") or configure an exclusion before relying
   on enforcement. Diagnosed during Week 3 with
   `tools/diagnose_round2.ps1`; documented in `CHANGES.md`
-  (2026-05-25 closeout entry) and `FUTURE_WORK.md` §7.
+  (2026-05-25 closeout entry) and `FUTURE_WORK.md` Â§7.
 
 - **Scan and flood detection.** Tools like `nmap -sS` and
   `hping3 --flood` produce 2-packet singleton flows that fall outside
@@ -213,7 +222,7 @@ The deferred-extension roadmap is in `FUTURE_WORK.md`.
   precision drops on these. Per-flow aggregation is a Phase 1 design
   choice preserved through Phase 2. Cross-flow correlation for
   scan/flood detection is documented as a
-  designed-on-paper extension in `FUTURE_WORK.md` §2.
+  designed-on-paper extension in `FUTURE_WORK.md` Â§2.
 
 - **Multi-class drift on novel attacks.** The binary head remains
   reliable in live conditions; the multi-class head tends to collapse
@@ -227,14 +236,14 @@ The deferred-extension roadmap is in `FUTURE_WORK.md`.
   rule` succeeds, Windows occasionally holds in-kernel filter state
   for the previously-blocked remote. Restarting the target listener
   (or `Restart-Service mpssvc` on Pro/Enterprise SKUs) clears it.
-  Environmental, not an AI-IDS defect; see `FUTURE_WORK.md` §7.
+  Environmental, not an AI-IDS defect; see `FUTURE_WORK.md` Â§7.
 
 - **Single-machine deployment.** No endpoint agent, no multi-host
-  fleet support. Sketched in `FUTURE_WORK.md` §1 as a designed-on-paper
+  fleet support. Sketched in `FUTURE_WORK.md` Â§1 as a designed-on-paper
   extension.
 
 - **Encrypted-channel attack validation.** Not in scope for Phase 2.
-  Sketched in `FUTURE_WORK.md` §4.
+  Sketched in `FUTURE_WORK.md` Â§4.
 
 Full extension roadmap in `FUTURE_WORK.md`.
 
@@ -248,9 +257,9 @@ pytest tests/
 ```
 
 The smoke test (`tests/test_smoke.py`) boots the FastAPI app in-process
-via `TestClient` and exercises the full chain — auth → `/predict` →
-mitigation request → admin approval → mocked `netsh` execution → audit
-log — then verifies the nine core ERD/auth/mitigation tables are
+via `TestClient` and exercises the full chain â€” auth â†’ `/predict` â†’
+mitigation request â†’ admin approval â†’ mocked `netsh` execution â†’ audit
+log â€” then verifies the nine core ERD/auth/mitigation tables are
 present. (The schema in `src/utils/db.py` defines ten tables in total:
 four Phase 1 ERD + three Week 2 auth + two Week 3 mitigation + one
 Week 4 security table, `login_attempts`, added by W4-Sub4d and not in
@@ -261,12 +270,12 @@ is intact.
 
 Existing test coverage:
 
-- `tests/test_firewall.py` — 6 tests on the netsh wrapper
+- `tests/test_firewall.py` â€” 6 tests on the netsh wrapper
   (`src/mitigation/firewall.py`)
-- `tests/test_mitigation_routes.py` — 12 tests on the mitigation
+- `tests/test_mitigation_routes.py` â€” 12 tests on the mitigation
   endpoints, RBAC, and the two-person rule
-- `tests/test_smoke.py` — 3 tests on end-to-end app wiring
-- `tests/test_login_lockout.py` — 3 tests on login timing
+- `tests/test_smoke.py` â€” 3 tests on end-to-end app wiring
+- `tests/test_login_lockout.py` â€” 3 tests on login timing
   equalization and per-user lockout
 
 Total: 24 tests; the full suite runs in ~24 seconds.
@@ -285,3 +294,4 @@ Lahore. Code and documentation are provided for academic and
 educational reference. The CIC-IDS2017 dataset is used under its
 public-research license. Third-party libraries retain their respective
 open-source licenses.
+
