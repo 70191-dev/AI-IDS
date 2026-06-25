@@ -24,11 +24,26 @@ the codebase),
 and confirmed attacks can be mitigated through a human-in-the-loop
 workflow: an analyst requests a block on an attacker IP, an admin
 reviews and approves, and the host firewall is updated via
-`netsh advfirewall`. The entire stack runs on a single Windows machine
-with no cloud services and no third-party telemetry.
+`netsh advfirewall`. The on-prem system runs entirely on a single
+Windows machine, with no cloud dependency for detection or enforcement
+and no third-party telemetry. A cloud-hosted demo of the analysis plane
+(dashboard and mitigation workflow over replayed data) is deployed
+separately for accessibility; live packet capture and `netsh`
+enforcement remain host-bound and run only on the local machine.
 
 Built and defended as an academic FYP; production deployment would
 require the extensions documented in `FUTURE_WORK.md`.
+
+## Live Demo
+
+- **Live dashboard** (analysis plane, replayed data):
+  <https://70191dev-ai-ids.hf.space>
+- **Project landing page:** <https://70191-dev.github.io/ai-ids-landing/>
+
+> The hosted instance demonstrates detection, alerts, the two-role
+> mitigation workflow, and the audit log over replayed traffic. Live
+> packet capture and `netsh` firewall enforcement are host-bound: they
+> run only on a local Windows machine, not on the cloud instance.
 
 ## Architecture
 
