@@ -1,12 +1,4 @@
-﻿---
-title: AI-IDS SOC Console
-emoji: "🛡️"
-colorFrom: blue
-colorTo: indigo
-sdk: docker
-app_port: 7860
-pinned: false
----
+
 # AI-Driven Intrusion Detection and Threat Mitigation System for Secure Networks
 
 > Final Year Project â€” BSCS, University of Lahore (Fall 2022â€“2026)
