@@ -1,7 +1,7 @@
 
 # AI-Driven Intrusion Detection and Threat Mitigation System for Secure Networks
 
-> Final Year Project â€” BSCS, University of Lahore (Fall 2022â€“2026)
+> Final Year Project BSCS, University of Lahore (Fall 2022â€“2026)
 > Project ID: Fall-2025-104
 > Supervisor: Dr. Nadeem Iqbal, Department of CS&IT
 
