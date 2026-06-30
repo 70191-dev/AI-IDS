@@ -176,29 +176,29 @@ single attacker collapses to one selectable row.
 
 ```
 ai_ids_complete/
-â”œâ”€â”€ START.bat                      Double-click (admin) to run everything
-â”œâ”€â”€ launch.py                      Supervisor: uvicorn + Streamlit
-â”œâ”€â”€ README.md                      This file
-â”œâ”€â”€ CHANGES.md                     Dated change log
-â”œâ”€â”€ FUTURE_WORK.md                 Deferred-extension roadmap
-â”œâ”€â”€ src/
-â”‚   â”œâ”€â”€ auth/                      passwords, tokens, audit, RBAC
-â”‚   â”œâ”€â”€ capture/                   live_capture (FlowAggregator, frozen)
-â”‚   â”œâ”€â”€ data/                      prep_cic2017, mock_data
-â”‚   â”œâ”€â”€ mitigation/                firewall (netsh wrapper)
-â”‚   â”œâ”€â”€ models/                    train.py
-â”‚   â”œâ”€â”€ serve/                     app.py, auth_routes.py, mitigation_routes.py
-â”‚   â””â”€â”€ utils/                     db.py, helpers.py
-â”œâ”€â”€ dashboard/
-â”‚   â”œâ”€â”€ app.py                     Main SOC console
-â”‚   â”œâ”€â”€ auth_ui.py                 Login + api_request helper
-â”‚   â””â”€â”€ pages/                     1_Users, 2_Audit_Log, 3_Mitigation
-â”œâ”€â”€ models/                        Trained .joblib + threshold.txt (frozen)
-â”œâ”€â”€ data/                          ids.db, blocked_ips.json, cic_profiles.json
-â”œâ”€â”€ tools/                         bootstrap_admin, dev_up, diagnose_*, replay_*
-â”œâ”€â”€ tests/                         test_firewall, test_mitigation_routes, test_smoke
-â”œâ”€â”€ lab/                           ATTACK_VALIDATION, ATTACK_PROFILES, attack_log
-â””â”€â”€ env/requirements.txt
+ START.bat                      Double-click (admin) to run everything
+ launch.py                      Supervisor: uvicorn + Streamlit
+ README.md                      This file
+ CHANGES.md                     Dated change log
+ FUTURE_WORK.md                 Deferred-extension roadmap
+ src/
+    auth/                      passwords, tokens, audit, RBAC
+    capture/                   live_capture (FlowAggregator, frozen)
+    data/                      prep_cic2017, mock_data
+    mitigation/                firewall (netsh wrapper)
+    models/                    train.py
+    serve/                     app.py, auth_routes.py, mitigation_routes.py
+   utils/                     db.py, helpers.py
+ dashboard/
+    app.py                     Main SOC console
+    auth_ui.py                 Login + api_request helper
+   pages/                     1_Users, 2_Audit_Log, 3_Mitigation
+ models/                        Trained .joblib + threshold.txt (frozen)
+ data/                          ids.db, blocked_ips.json, cic_profiles.json
+ tools/                         bootstrap_admin, dev_up, diagnose_*, replay_*
+ tests/                         test_firewall, test_mitigation_routes, test_smoke
+ lab/                           ATTACK_VALIDATION, ATTACK_PROFILES, attack_log
+ env/requirements.txt
 ```
 
 ## Demo
