@@ -1,0 +1,21 @@
+AI-IDS FYP Presentation — image assets (17 files)
+Commit these to:  docs/slides/  on the main branch of github.com/70191-dev/AI-IDS
+Public URL each will get:  https://raw.githubusercontent.com/70191-dev/AI-IDS/main/docs/slides/<filename>
+
+logo.png                     -> Title slide (University of Lahore logo)
+usecase_aggregated.png       -> Aggregated Use Case Diagram (Fig 3)
+usecase_classify.png         -> Use Case: Classify network traffic (Fig 3.3, UC_03)
+usecase_approve_enforce.png  -> Use Case: Approve/deny & enforce block (Fig 3.10, UC_10)
+architecture.png             -> System Architecture (Fig 4.1)
+erd.png                      -> ER Diagram (Fig 4.2)
+uml_class.png                -> UML: Class Diagram (Fig 4.4)
+uml_activity.png             -> UML: Aggregated Activity Diagram (Fig 4.5)
+uml_sequence.png             -> UML: Aggregated Sequence Diagram (Fig 4.6)
+uml_collaboration.png        -> UML: Collaboration Diagram (Fig 4.7)
+uml_state_transition.png     -> UML: State Transition Diagram (Fig 4.8)
+screenshot_login.png         -> Screenshot: Login (Fig 8.2)
+screenshot_dashboard.png     -> Screenshot: SOC Dashboard overview (Fig 8.3)
+screenshot_alerts.png        -> Screenshot: Real-time alerts (Fig 8.5)
+screenshot_request_block.png -> Screenshot: Request Block / analyst (Fig 8.6)
+screenshot_approve_block.png -> Screenshot: Approve & enforce / admin (Fig 8.7)
+screenshot_ai_report.png     -> Screenshot: AI incident report (Fig 8.10)
