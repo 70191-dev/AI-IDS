@@ -287,12 +287,6 @@ Existing test coverage:
 
 Total: 24 tests; the full suite runs in ~24 seconds.
 
-## Team
-
-- **Muhammad Usman Tariq** (SAP 70139691)
-- **Muhammad Mousa Khan** (SAP 70140245)
-- **Supervisor:** Dr. Nadeem Iqbal, Department of CS&IT, The University
-  of Lahore
 
 ## Academic Use
 
